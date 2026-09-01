@@ -21,21 +21,13 @@ class Usuario(Base):
     email = Column("email", String, nullable=False)
     senha = Column("senha", String, nullable=False)
     ativo = Column("ativo", Boolean, default=True)
-    admin = Column("admin", Boolean, default=False)
-    telefone = Column("telefone", String)
-    cpf = Column("cpf", String)
-    data_nascimento = Column("data_nascimento", String)
 
-    def __init__(self, nome, email, senha, ativo, admin, telefone, cpf, data_nascimento):
+    def __init__(self, nome, email, senha, ativo):
 
         self.nome = nome
         self.email = email
         self.senha = senha
         self.ativo = ativo
-        self.admin = admin
-        self.telefone = telefone
-        self.cpf = cpf
-        self.data_nascimento = data_nascimento
 
 
 # Dentistas

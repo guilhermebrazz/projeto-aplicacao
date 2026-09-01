@@ -4,4 +4,4 @@ app = FastAPI()
 
 from routes import auth
 
-app.include_router(auth)
+app.include_router(auth.router)
