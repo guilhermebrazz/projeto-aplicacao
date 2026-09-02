@@ -13,14 +13,14 @@ Inicialmente, defini a tabela **usuarios** com as seguintes colunas:
 E a tabela **pacientes** com as seguintes colunas:
 
 
--**nome**
--**sexo**
--**nascimento**
--**email**
--**telefone**
--**rg**
--**cpf**
--**observacoes**
+- **nome**
+- **sexo**
+- **nascimento**
+- **email**
+- **telefone**
+- **rg**
+- **cpf**
+- **observacoes**
 
 As tabelas foram definidas utilizando SQLAlchemy ORM. A ideia é que a tabela **usuarios** guarde apenas os admins do sistema (como dentistas e recepcionistas) que terão acesso ao painel administrativo, onde conseguirão "criar um novo paciente" onde preencherão os dados dele que irá direto para a tabela dos pacientes.
 
