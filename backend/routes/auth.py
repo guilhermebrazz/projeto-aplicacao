@@ -1,6 +1,6 @@
-from fastapi import APIRouter
-from models import Usuario, db
-from sqlalchemy.orm import sessionmaker
+from fastapi import APIRouter, Depends
+from models import Usuario
+from dependicies import usar_secao
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -9,10 +9,8 @@ async def autenticar():
     return {"começo" : "testes"}
 
 @router.post("/criar_conta") #envia
-async def login(email: str, senha: str, nome: str, ativo: bool): #recebe
+async def login(email: str, senha: str, nome: str, ativo: bool, session = Depends(usar_secao)): #recebe
 
-    Session = sessionmaker(bind=db)
-    session = Session()
     usuario = session.query(Usuario).filter(Usuario.email == email).all() # SELECT * FROM usuarios WHERE email = 'joao@email.com';
 
     if len(usuario) > 0:
