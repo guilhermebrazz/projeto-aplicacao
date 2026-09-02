@@ -12,7 +12,7 @@ Inicialmente, defini a tabela **usuarios** com as seguintes colunas:
 
 E a tabela **pacientes** com as seguintes colunas:
 
-
+- **id** 
 - **nome**
 - **sexo**
 - **nascimento**
